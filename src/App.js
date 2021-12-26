@@ -1,7 +1,9 @@
-import BottomBanner from "./assets/bottom-banner.png";
+import BottomBanner from "./assets/imagem-roxo-LP.png";
 import PhoneMockup from "./assets/phone-mockup.png";
 import PersonPicture from "./assets/person-picture.png";
 import SallveLogo from "./assets/sallve-logo.png";
+import IconSun from "./assets/icon-sun.svg";
+import IconMoon from "./assets/icon-moon.svg";
 import "./App.scss";
 
 function App() {
@@ -10,21 +12,20 @@ function App() {
       <main id="quiz--openning">
         <section id="quiz--openning--banner">
           <div className="layout">
-            <div className="box_content">
-              <h2 className="title_page">
-                descubra o que sua pele <span>realmente</span> precisa
+            <div class="box_content">
+              <h2 class="title_page">
+                você sabe o que sua pele <em>realmente</em> precisa?
               </h2>
-              <p className="description">
-                conte sobre você e a sua pele e a gente sugere uma{" "}
-                <strong>rotina Sallve personalizada</strong>
-              </p>
-              <a className="btn_go" href="{{ section.settings.btn_go }}">
-                quero descobrir
+              <a class="btn_go" href="{{ section.settings.btn_go }}">
+                fazer o teste
               </a>
-              <p className="disclaimer">
-                <i className="far fa-clock"></i> leva menos de{" "}
-                <strong>5 minutos</strong>
-              </p>
+            </div>
+          </div>
+          <div className="cards-container">
+            <div className="result-card">
+              <div className="row-inner"></div>
+              <div className="row-inner"></div>
+              <div className="row-inner"></div>
             </div>
           </div>
           <div className="figure_mobile">
@@ -35,86 +36,219 @@ function App() {
           </div>
         </section>
 
-        <section id="quiz--openning--testimonials-slider">
-          <div className="slider">
-            <div className="slider-inner">
-              <div className="card">
-                <p>
-                  ”Limpa bem sem ressecar (...) sensorial super agradável (...)
-                  espuma leve e gentil (...)”
-                </p>
-                <div className="row justify-space-between">
-                  <p>Marina, pele seca</p>
-                  <div className="stars-container">
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-gray-1" />
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <p>
-                  ”Limpa bem sem ressecar (...) sensorial super agradável (...)
-                  espuma leve e gentil (...)”
-                </p>
-                <div className="row justify-space-between">
-                  <p>Marina, pele seca</p>
-                  <div className="stars-container">
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-gray-1" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section id="quiz--openning--marquee">
+          <p>
+            · mais de 1.000.000 já descobriram o que a pele precisa · mais de 1
+            milhão de pessoas já descobriram o que a pele precisa · mais de
+            1.000.000 já descobriram o que a pele precisa · mais de 1 milhão de
+            pessoas já descobriram o que a pele precisa
+          </p>
+        </section>
 
-          <div className="slider reverse">
-            <div className="slider-inner">
-              <div className="card">
-                <p>
-                  ”Limpa bem sem ressecar (...) sensorial super agradável (...)
-                  espuma leve e gentil (...)”
-                </p>
-                <div className="row justify-space-between">
-                  <p>Marina, pele seca</p>
-                  <div className="stars-container">
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-gray-1" />
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <p>
-                  ”Limpa bem sem ressecar (...) sensorial super agradável (...)
-                  espuma leve e gentil (...)”
-                </p>
-                <div className="row justify-space-between">
-                  <p>Marina, pele seca</p>
-                  <div className="stars-container">
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-pink-1" />
-                    <i className="fas fa-star color-gray-1" />
-                  </div>
+        <section id="quiz--openning--testimonials-slider">
+          {/* <div className="slider normal">
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
                 </div>
               </div>
             </div>
-          </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          {/* <div className="slider reverse" dir="rtl">
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <p>
+                ”Limpa bem sem ressecar (...) sensorial super agradável (...)
+                espuma leve e gentil (...)”
+              </p>
+              <div className="row-inner justify-space-between">
+                <p>Marina, pele seca</p>
+                <div className="stars-container">
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-pink-1" />
+                  <i className="fas fa-star color-gray-1" />
+                </div>
+              </div>
+            </div>
+          </div> */}
         </section>
 
         <section id="quiz--openning--highlight">
-          <div className="testimonial">
+          <div className="testimonial" data-aos="fade-left">
             <div className="content">
-              <div className="row">
+              <div className="row-inner">
                 <p>
                   “
                   <em>
@@ -126,7 +260,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="row justify-space-between align-center">
+              <div className="row-inner justify-space-between align-center">
                 <div className="person-infos">
                   <p>
                     <strong>Marcela</strong>
@@ -142,16 +276,17 @@ function App() {
                 </div>
               </div>
 
-              <div className="quiz-infos row align-center justify-space-between">
-                <div className="row align-center">
+              <div className="quiz-infos row-inner align-center justify-space-between">
+                <div className="row-inner align-center">
                   <i className="fas fa-clock color-purple-1" />
                   <p>
                     <strong>5 a 10 </strong>
-                    minutos
+                    <span className="desktop">minutos</span>
+                    <span className="mobile">min.</span>
                   </p>
                 </div>
 
-                <div className="row align-center">
+                <div className="row-inner align-center">
                   <i className="fas fa-list color-purple-1" />
                   <p>
                     <strong>6 </strong>
@@ -159,7 +294,7 @@ function App() {
                   </p>
                 </div>
 
-                <div className="row align-center">
+                <div className="row-inner align-center">
                   <i className="fas fa-hand-holding-water color-purple-1" />
                   <p>
                     <strong>4 </strong>
@@ -170,7 +305,7 @@ function App() {
             </div>
           </div>
 
-          <div className="recommendations">
+          <div className="recommendations" data-aos="fade-up">
             <div className="content">
               <img src={SallveLogo} alt="logo sallve" />
               <p className="recommendation-person">
@@ -180,10 +315,10 @@ function App() {
               <div className="grid-row">
                 <div></div>
                 <div className="routine day">
-                  <i className="far fa-sun" />
+                  <img src={IconSun} alt="ícone produtos para o dia" />
                 </div>
                 <div className="routine night">
-                  <i className="far fa-moon" />
+                  <img src={IconMoon} alt="ícone produtos para a noite" />
                 </div>
               </div>
               <div className="grid-row">
@@ -217,28 +352,26 @@ function App() {
             </div>
           </div>
 
-          <div className="person-picture">
+          <div className="person-picture" data-aos="fade-down">
             <img src={PersonPicture} alt="foto marcela" />
           </div>
         </section>
 
-        <div className="row align-center justify-center">
-          <a className="btn_go" href="{{ section.settings.btn_go }}">
+        <div
+          className="row-inner align-center justify-center"
+          data-aos="fade-up"
+        >
+          <a
+            className="btn_go"
+            href="{{ section.settings.btn_go }}"
+            data-aos-duration="100"
+          >
             montar minha rotina
           </a>
         </div>
 
-        <section id="quiz--openning--marquee">
-          <p>
-            · mais de 1.000.000 já descobriram o que a pele precisa · mais de 1
-            milhão de pessoas já descobriram o que a pele precisa · mais de
-            1.000.000 já descobriram o que a pele precisa · mais de 1 milhão de
-            pessoas já descobriram o que a pele precisa
-          </p>
-        </section>
-
         <section id="quiz--openning--routines">
-          <div className="row align-center justify-center direction-column">
+          <div className="row-inner align-center justify-center direction-column">
             <h2 className="section-title">
               uma <span>rotina personalizada</span> pra sua pele
             </h2>
@@ -247,15 +380,15 @@ function App() {
             </p>
           </div>
 
-          <div className="row align-center justify-center mobile-direction-column-reverse">
+          <div className="row-inner align-center justify-center mobile-direction-column-reverse">
             <div className="phone-mockup-wrapper">
               <div className="content">
-                <div className="row">
+                <div className="row-inner">
                   <h3>
                     <span>qual é a história da SUA pele?</span>
                   </h3>
                 </div>
-                <div className="row justify-end">
+                <div className="row-inner justify-end">
                   <div className="item">
                     <i className="fa fa-check" />
                     <p>
@@ -263,7 +396,7 @@ function App() {
                     </p>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row-inner">
                   <div className="item">
                     <i className="fa fa-check" />
                     <p>
@@ -271,7 +404,7 @@ function App() {
                     </p>
                   </div>
                 </div>
-                <div className="row justify-end">
+                <div className="row-inner justify-end">
                   <div className="item">
                     <i className="fa fa-check" />
                     <p>
@@ -279,7 +412,7 @@ function App() {
                     </p>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row-inner">
                   <div className="item">
                     <i className="fa fa-check" />
                     <p>
@@ -297,7 +430,7 @@ function App() {
             </div>
 
             <div className="feedback">
-              <div className="row align-start">
+              <div className="row-inner align-start" data-aos="fade-right">
                 <div className="number-container">
                   <p>1</p>
                 </div>
@@ -305,7 +438,7 @@ function App() {
                   nos <strong>conte</strong> sobre você e sobre a sua pele
                 </p>
               </div>
-              <div className="row align-start">
+              <div className="row-inner align-start" data-aos="fade-right">
                 <div className="number-container">
                   <p>2</p>
                 </div>
@@ -315,7 +448,7 @@ function App() {
                   precisa
                 </p>
               </div>
-              <div className="row align-start">
+              <div className="row-inner align-start" data-aos="fade-right">
                 <div className="number-container">
                   <p>3</p>
                 </div>
@@ -324,7 +457,10 @@ function App() {
                   incluir na sua rotina
                 </p>
               </div>
-              <div className="row align-start">
+              <div
+                className="row-inner align-start mobile-justify-center"
+                data-aos="fade-right"
+              >
                 <a className="btn_go" href="{{ section.settings.btn_go }}">
                   quero fazer o teste
                 </a>
